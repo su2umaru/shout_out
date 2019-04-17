@@ -9,10 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    class Item{
+        var name : String
+        
+        init(name: String) {
+            self.name = name
+        }
+    }
+    
+    var wordArray: [Item] = []
+    var memberArray: [Item] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toWordSettingController" {
+            let wordSettingController:WordSettingController = segue.destination as! WordSettingController
+            
+            wordSettingController.wordArray = self.wordArray
+        }
+        
     }
 
 
