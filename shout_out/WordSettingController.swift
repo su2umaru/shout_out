@@ -8,28 +8,22 @@
 
 import UIKit
 
-class WordSettingController: UITableViewController {
-    
-    class Item{
-        var name : String
+class WordSettingController: UITableViewController, UINavigationControllerDelegate {
 
-        init(name: String) {
-            self.name = name
-        }
-    }
-
-    var wordArray: [Item] = []
+    var wordArray: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.delegate = self
         
-        let item1: Item = Item(name: "よっしゃ！")
-        let item2: Item = Item(name: "いぇーい！")
-        let item3: Item = Item(name: "いいね！")
-        
-        wordArray.append(item1)
-        wordArray.append(item2)
-        wordArray.append(item3)
+        self.navigationItem.title = "ワード登録"
+//        let word1: String = "よっしゃ！"
+//        let word2: String = "いぇーい！"
+//        let word3: String = "いいね！"
+//
+//        wordArray.append(word1)
+//        wordArray.append(word2)
+//        wordArray.append(word3)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -53,8 +47,8 @@ class WordSettingController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WordCell", for: indexPath)
-        let item = wordArray[indexPath.row]
-        cell.textLabel?.text = item.name
+        let word = wordArray[indexPath.row]
+        cell.textLabel?.text = word
 
         return cell
     }
@@ -69,11 +63,13 @@ class WordSettingController: UITableViewController {
         let action = UIAlertAction(title: "リストに追加", style: .default) { (action) in
             // 「リストに追加」を押された時に実行される処理
             
-            let newItem: Item = Item(name: textField.text!)
+            let newWord: String = textField.text!
             
             // アイテム追加処理
-            self.wordArray.append(newItem)
-            self.tableView.reloadData()
+            if !newWord.isEmpty {
+                self.wordArray.append(newWord)
+                self.tableView.reloadData()
+            }
             
         }
         
@@ -93,6 +89,18 @@ class WordSettingController: UITableViewController {
         let indexPaths = [indexPath]
         tableView.deleteRows(at: indexPaths, with: .automatic)
         
+    }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        let titleController: TitleController = self.navigationController?.popViewController(animated: true) as! TitleController
+//        titleController.wordArray = self.wordArray
+//    }
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        if let titleController: TitleController = viewController as? TitleController {
+            print(self.wordArray)
+            titleController.wordArray = self.wordArray
+        }
     }
 
     /*

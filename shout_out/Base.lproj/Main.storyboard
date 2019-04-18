@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="shout_out" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TitleController" customModule="shout_out" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992.79999999999995" y="26.53673163418291"/>
+            <point key="canvasLocation" x="999" y="27"/>
         </scene>
         <!--Game Controller-->
         <scene sceneID="hrA-23-9M7">
@@ -205,7 +205,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="SY5-Zl-tAf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bdw-Aw-CbO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bdw-Aw-CbO">
+                            <connections>
+                                <action selector="addMember:" destination="897-T6-RVf" id="VaN-6k-VN3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNU-fy-aXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
