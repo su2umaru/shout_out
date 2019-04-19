@@ -16,13 +16,17 @@ class TitleController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //        let word1: String = "よっしゃ！"
-        //        let word2: String = "いぇーい！"
-        //        let word3: String = "いいね！"
-        //
-        //        wordArray.append(word1)
-        //        wordArray.append(word2)
-        //        wordArray.append(word3)
+        let word1: String = "よっしゃ！"
+        let word2: String = "いぇーい！"
+        let word3: String = "いいね！"
+        self.wordArray.append(word1)
+        self.wordArray.append(word2)
+        self.wordArray.append(word3)
+        
+        let member1: String = "たかし"
+        let member2: String = "よしこ"
+        self.memberArray.append(member1)
+        self.memberArray.append(member2)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,6 +39,10 @@ class TitleController: UIViewController {
         } else if segue.identifier == "toMemberSettingController" {
             let memberSettingController:MemberSettingController = segue.destination as! MemberSettingController
             memberSettingController.memberArray = self.memberArray
+        } else if segue.identifier == "toGameController" {
+            let gameController:GameController = segue.destination as! GameController
+            gameController.wordArray = self.wordArray
+            gameController.memberArray = self.memberArray
         }
         
     }
