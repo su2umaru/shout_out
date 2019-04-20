@@ -13,6 +13,7 @@
 		32309C882264BB20003FB84D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32309C862264BB20003FB84D /* Main.storyboard */; };
 		32309C8A2264BB20003FB84D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32309C892264BB20003FB84D /* Assets.xcassets */; };
 		32309C8D2264BB20003FB84D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32309C8B2264BB20003FB84D /* LaunchScreen.storyboard */; };
+		3241B66A226ABEE300C7E9E7 /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3241B669226ABEE300C7E9E7 /* ResultController.swift */; };
 		32F6B75022673CE500FBFBEA /* WordSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6B74F22673CE500FBFBEA /* WordSettingController.swift */; };
 		32F6B75222673D1A00FBFBEA /* MemberSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6B75122673D1A00FBFBEA /* MemberSettingController.swift */; };
 		32F6B75422673D4C00FBFBEA /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6B75322673D4C00FBFBEA /* GameController.swift */; };
@@ -27,6 +28,7 @@
 		32309C892264BB20003FB84D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32309C8C2264BB20003FB84D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32309C8E2264BB20003FB84D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3241B669226ABEE300C7E9E7 /* ResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
 		32F6B74F22673CE500FBFBEA /* WordSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSettingController.swift; sourceTree = "<group>"; };
 		32F6B75122673D1A00FBFBEA /* MemberSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberSettingController.swift; sourceTree = "<group>"; };
 		32F6B75322673D4C00FBFBEA /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				32F6B74F22673CE500FBFBEA /* WordSettingController.swift */,
 				32F6B75122673D1A00FBFBEA /* MemberSettingController.swift */,
 				32F6B75322673D4C00FBFBEA /* GameController.swift */,
+				3241B669226ABEE300C7E9E7 /* ResultController.swift */,
 				32309C822264BB20003FB84D /* AppDelegate.swift */,
 				32309C842264BB20003FB84D /* ViewController.swift */,
 				32309C862264BB20003FB84D /* Main.storyboard */,
@@ -152,6 +155,7 @@
 				32F6B75422673D4C00FBFBEA /* GameController.swift in Sources */,
 				32309C832264BB20003FB84D /* AppDelegate.swift in Sources */,
 				32F6B75222673D1A00FBFBEA /* MemberSettingController.swift in Sources */,
+				3241B66A226ABEE300C7E9E7 /* ResultController.swift in Sources */,
 				32F6B75022673CE500FBFBEA /* WordSettingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
