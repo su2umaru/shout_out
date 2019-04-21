@@ -18,47 +18,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shout Out !!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="918-2Y-07j">
-                                <rect key="frame" x="86" y="75" width="203" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shout Out !!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="918-2Y-07j">
+                                <rect key="frame" x="130.5" y="164" width="114" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwu-sN-0hX">
-                                <rect key="frame" x="32" y="253" width="311" height="161"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDR-fR-UfV">
+                                <rect key="frame" x="203" y="431.5" width="92" height="30"/>
+                                <state key="normal" title="メンバー登録"/>
+                                <connections>
+                                    <segue destination="897-T6-RVf" kind="show" identifier="toMemberSettingController" id="oc4-5M-nP1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkz-Wb-Aan">
+                                <rect key="frame" x="80" y="431.5" width="77" height="30"/>
+                                <state key="normal" title="ワード登録"/>
+                                <connections>
+                                    <segue destination="AgZ-Pl-h4R" kind="show" identifier="toWordSettingController" id="LF7-mD-sdN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwu-sN-0hX">
+                                <rect key="frame" x="116" y="315.5" width="143" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="ゲームを始める"/>
                                 <connections>
                                     <segue destination="GVZ-nC-6IB" kind="show" identifier="toGameController" id="N85-tC-STs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDR-fR-UfV">
-                                <rect key="frame" x="216" y="454" width="103" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="メンバー登録"/>
-                                <connections>
-                                    <segue destination="897-T6-RVf" kind="show" identifier="toMemberSettingController" id="oc4-5M-nP1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkz-Wb-Aan">
-                                <rect key="frame" x="66" y="454" width="103" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ワード登録"/>
-                                <connections>
-                                    <segue destination="AgZ-Pl-h4R" kind="show" identifier="toWordSettingController" id="LF7-mD-sdN"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bDR-fR-UfV" firstAttribute="top" secondItem="hwu-sN-0hX" secondAttribute="bottom" constant="80" id="6TQ-yG-JH0"/>
+                            <constraint firstItem="Jkz-Wb-Aan" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="Pna-cx-APS"/>
+                            <constraint firstItem="bDR-fR-UfV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jkz-Wb-Aan" secondAttribute="trailing" constant="8" symbolic="YES" id="QJX-nR-dHm"/>
+                            <constraint firstItem="918-2Y-07j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SJ1-gu-btl"/>
+                            <constraint firstItem="hwu-sN-0hX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SSx-gW-K01"/>
+                            <constraint firstItem="Jkz-Wb-Aan" firstAttribute="top" secondItem="hwu-sN-0hX" secondAttribute="bottom" constant="80" id="V71-PT-ewG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bDR-fR-UfV" secondAttribute="trailing" constant="80" id="ayz-r7-W2n"/>
+                            <constraint firstItem="918-2Y-07j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="sap-7L-gtw"/>
+                            <constraint firstItem="hwu-sN-0hX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uLf-qd-fbC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="2c5-F9-hJZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="999" y="27"/>
+            <point key="canvasLocation" x="997.60000000000002" y="26.53673163418291"/>
         </scene>
         <!--Game Controller-->
         <scene sceneID="hrA-23-9M7">
@@ -329,6 +336,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="apM-B1-PVP"/>
+        <segue reference="33S-NH-HyH"/>
     </inferredMetricsTieBreakers>
 </document>
