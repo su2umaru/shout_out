@@ -23,7 +23,12 @@ class ResultController: UIViewController {
         self.navigationItem.title = "結果"
         
         self.loserLabel.text = self.loser
-        self.maxScoreLabel.text = self.maxScore
+        self.loserLabel.text?.append("の負け")
+//        self.loserLabel.text = self.loser
+        self.maxScoreLabel.text = "最大スコア "
+        self.maxScoreLabel.text?.append(self.maxScore.replacingOccurrences(of: "ボーダー ", with: "").replacingOccurrences(of: " を超えろ！", with: ""))
+        
+//        self.maxScoreLabel.text = self.maxScore
         // Do any additional setup after loading the view.
     }
     

@@ -42,7 +42,6 @@ class GameController: UIViewController {
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var borderLabel: UILabel!
-    @IBOutlet weak var borderFollowLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     
@@ -62,7 +61,8 @@ class GameController: UIViewController {
                 self.stopUpdatingVolume()
                 print("complete recording")
                 
-                self.scoreLabel.text = String((Int)(self.score))
+                self.scoreLabel.text?.append(String((Int)(self.score)))
+//                self.scoreLabel.text = String((Int)(self.score))
                 if self.score > self.border {
                     self.resultLabel.text = "セーフ"
                     self.nextButton.setTitle("次ラウンドへ", for: .normal)
@@ -71,7 +71,8 @@ class GameController: UIViewController {
                     self.is_safe = true
                 } else {
                     self.resultLabel.text = "アウト！！"
-                    self.nextButton.titleLabel?.text = "結果へ"
+                    self.nextButton.setTitle("結果へ", for: .normal)
+                    self.nextButton.isHidden = false
                     self.is_safe = false
                 }
             }
@@ -120,26 +121,34 @@ class GameController: UIViewController {
 //    }'
     
     func drawStartView() {
-        self.roundLabel.text = String(self.round)
+        self.roundLabel.text = "Round "
+        self.roundLabel.text?.append(String(self.round))
         
         let memberIndex: Int = Int(arc4random_uniform(UInt32(self.memberArray.count)))
         self.memberLabel.text = String(memberArray[memberIndex])
+        self.memberLabel.text?.append(" さん")
+//        self.memberLabel.text = String(memberArray[memberIndex])
         
         let wordIndex: Int = Int(arc4random_uniform(UInt32(self.wordArray.count)))
-        self.wordLabel.text = String(wordArray[wordIndex])
+        self.wordLabel.text = "指定ワード "
+        self.wordLabel.text?.append(String(wordArray[wordIndex]))
+//        self.wordLabel.text = String(wordArray[wordIndex])
         
+        self.borderLabel.text = "ボーダー "
         if self.round == 1 {
-            self.borderLabel.text = "なし"
-            self.borderFollowLabel.text = ""
+            self.borderLabel.text?.append("なし")
+//            self.borderLabel.text = "なし"
         } else {
-            self.borderLabel.text =  String(Int(self.border))
-            self.borderFollowLabel.text = "を超えろ！"
+            self.borderLabel.text?.append(String(Int(self.border)))
+            self.borderLabel.text?.append(" を超えろ！")
+//            self.borderLabel.text = String(Int(self.border))
         }
         
-        self.scoreLabel.text = ""
+        self.scoreLabel.text = "スコア "
         
         self.resultLabel.text = ""
         
+        self.nextButton.setTitle("", for: .normal)
         self.nextButton.isHidden = true
         
         //        while !self.was_record {

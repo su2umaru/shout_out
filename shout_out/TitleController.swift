@@ -29,6 +29,11 @@ class TitleController: UIViewController {
         self.memberArray.append(member2)
     }
     
+    // Hide navigation bar
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "toWordSettingController" {
