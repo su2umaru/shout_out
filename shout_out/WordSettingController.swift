@@ -31,6 +31,11 @@ class WordSettingController: UITableViewController, UINavigationControllerDelega
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
 //         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    // Show navigation bar
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 
     // MARK: - Table view data source
 
