@@ -43,6 +43,7 @@ class GameController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var borderLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
     
@@ -65,13 +66,19 @@ class GameController: UIViewController {
 //                self.scoreLabel.text = String((Int)(self.score))
                 if self.score > self.border {
                     self.resultLabel.text = "セーフ"
-                    self.nextButton.setTitle("次ラウンドへ", for: .normal)
+                    self.nextButton.setTitle(" 次ラウンドへ ", for: .normal)
+                    self.nextButton.layer.borderWidth = 1.0
+                    self.nextButton.layer.borderColor = UIColor.white.cgColor
+                    self.nextButton.layer.cornerRadius = 5.0
                     self.nextButton.isHidden = false
 //                    self.nextButton.titleLabel?.text = "次ラウンドへ"
                     self.is_safe = true
                 } else {
                     self.resultLabel.text = "アウト！！"
-                    self.nextButton.setTitle("結果へ", for: .normal)
+                    self.nextButton.setTitle(" 結果へ ", for: .normal)
+                    self.nextButton.layer.borderWidth = 1.0
+                    self.nextButton.layer.borderColor = UIColor.white.cgColor
+                    self.nextButton.layer.cornerRadius = 5.0
                     self.nextButton.isHidden = false
                     self.is_safe = false
                 }
@@ -121,7 +128,7 @@ class GameController: UIViewController {
 //    }'
     
     func drawStartView() {
-        self.roundLabel.text = "Round "
+        self.roundLabel.text = "ラウンド "
         self.roundLabel.text?.append(String(self.round))
         
         let memberIndex: Int = Int(arc4random_uniform(UInt32(self.memberArray.count)))
@@ -130,7 +137,7 @@ class GameController: UIViewController {
 //        self.memberLabel.text = String(memberArray[memberIndex])
         
         let wordIndex: Int = Int(arc4random_uniform(UInt32(self.wordArray.count)))
-        self.wordLabel.text = "指定ワード "
+        self.wordLabel.text = "指定ワード   "
         self.wordLabel.text?.append(String(wordArray[wordIndex]))
 //        self.wordLabel.text = String(wordArray[wordIndex])
         
@@ -143,6 +150,10 @@ class GameController: UIViewController {
             self.borderLabel.text?.append(" を超えろ！")
 //            self.borderLabel.text = String(Int(self.border))
         }
+        
+        self.recordButton.layer.borderWidth = 1.0
+        self.recordButton.layer.borderColor = UIColor.white.cgColor
+        self.recordButton.layer.cornerRadius = 5.0
         
         self.scoreLabel.text = "スコア "
         

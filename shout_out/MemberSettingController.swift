@@ -16,6 +16,7 @@ class MemberSettingController: UITableViewController, UINavigationControllerDele
         super.viewDidLoad()
         navigationController?.delegate = self
         
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255, green: 147/255, blue: 0/255, alpha: 100/100)
         self.navigationItem.title = "メンバー登録"
 //        let item1: Item = Item(name: "たろう")
 //        let item2: Item = Item(name: "じろう")

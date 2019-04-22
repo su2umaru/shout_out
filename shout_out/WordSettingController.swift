@@ -16,6 +16,7 @@ class WordSettingController: UITableViewController, UINavigationControllerDelega
         super.viewDidLoad()
         navigationController?.delegate = self
         
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 255/255, green: 147/255, blue: 0/255, alpha: 100/100)
         self.navigationItem.title = "ワード登録"
 //        let word1: String = "よっしゃ！"
 //        let word2: String = "いぇーい！"

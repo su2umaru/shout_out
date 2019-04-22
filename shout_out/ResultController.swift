@@ -15,12 +15,11 @@ class ResultController: UIViewController {
     
     @IBOutlet weak var loserLabel: UILabel!
     @IBOutlet weak var maxScoreLabel: UILabel!
+    @IBOutlet weak var backTitleButton: UIButton!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationItem.title = "結果"
         
         self.loserLabel.text = self.loser
         self.loserLabel.text?.append("の負け")
@@ -28,15 +27,20 @@ class ResultController: UIViewController {
         self.maxScoreLabel.text = "最大スコア "
         self.maxScoreLabel.text?.append(self.maxScore.replacingOccurrences(of: "ボーダー ", with: "").replacingOccurrences(of: " を超えろ！", with: ""))
         
+        self.backTitleButton.layer.borderWidth = 1.0
+        self.backTitleButton.layer.borderColor = UIColor.white.cgColor
+        self.backTitleButton.layer.cornerRadius = 5.0
+        
 //        self.maxScoreLabel.text = self.maxScore
         // Do any additional setup after loading the view.
     }
     
     // Hide navigation bar
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(false, animated: false)
-        navigationItem.hidesBackButton = true
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
+    
+    
     
 
     /*

@@ -19,49 +19,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shout Out !!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="918-2Y-07j">
-                                <rect key="frame" x="130.5" y="164" width="114" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <rect key="frame" x="105.5" y="120" width="164.5" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDR-fR-UfV">
-                                <rect key="frame" x="203" y="431.5" width="92" height="30"/>
-                                <state key="normal" title="メンバー登録"/>
+                                <rect key="frame" x="193" y="436.5" width="132" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title=" メンバー登録 "/>
                                 <connections>
                                     <segue destination="897-T6-RVf" kind="show" identifier="toMemberSettingController" id="oc4-5M-nP1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkz-Wb-Aan">
-                                <rect key="frame" x="80" y="431.5" width="77" height="30"/>
-                                <state key="normal" title="ワード登録"/>
+                                <rect key="frame" x="50" y="436.5" width="111" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title=" ワード登録 "/>
                                 <connections>
                                     <segue destination="AgZ-Pl-h4R" kind="show" identifier="toWordSettingController" id="LF7-mD-sdN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwu-sN-0hX">
-                                <rect key="frame" x="116" y="315.5" width="143" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="ゲームを始める"/>
+                                <rect key="frame" x="82" y="310.5" width="211" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title=" ゲームを始める "/>
                                 <connections>
-                                    <segue destination="GVZ-nC-6IB" kind="show" identifier="toGameController" id="N85-tC-STs"/>
+                                    <segue destination="GVZ-nC-6IB" kind="presentation" identifier="toGameController" modalTransitionStyle="crossDissolve" id="N85-tC-STs"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bDR-fR-UfV" firstAttribute="top" secondItem="hwu-sN-0hX" secondAttribute="bottom" constant="80" id="6TQ-yG-JH0"/>
-                            <constraint firstItem="Jkz-Wb-Aan" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="Pna-cx-APS"/>
+                            <constraint firstItem="Jkz-Wb-Aan" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Pna-cx-APS"/>
                             <constraint firstItem="bDR-fR-UfV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jkz-Wb-Aan" secondAttribute="trailing" constant="8" symbolic="YES" id="QJX-nR-dHm"/>
                             <constraint firstItem="918-2Y-07j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SJ1-gu-btl"/>
                             <constraint firstItem="hwu-sN-0hX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SSx-gW-K01"/>
                             <constraint firstItem="Jkz-Wb-Aan" firstAttribute="top" secondItem="hwu-sN-0hX" secondAttribute="bottom" constant="80" id="V71-PT-ewG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bDR-fR-UfV" secondAttribute="trailing" constant="80" id="ayz-r7-W2n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bDR-fR-UfV" secondAttribute="trailing" constant="50" id="ayz-r7-W2n"/>
                             <constraint firstItem="918-2Y-07j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="sap-7L-gtw"/>
                             <constraint firstItem="hwu-sN-0hX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uLf-qd-fbC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="2c5-F9-hJZ"/>
+                    <connections>
+                        <outlet property="gameStartButton" destination="hwu-sN-0hX" id="lYq-kw-yQp"/>
+                        <outlet property="memberSettingButton" destination="bDR-fR-UfV" id="MKC-E8-WVM"/>
+                        <outlet property="wordSettingButton" destination="Jkz-Wb-Aan" id="XeG-MR-PGt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,62 +82,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKg-bV-je6">
-                                <rect key="frame" x="166.5" y="144" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ラウンド x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKg-bV-je6">
+                                <rect key="frame" x="130.5" y="60" width="114.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpN-3O-Vi7">
-                                <rect key="frame" x="135" y="315.5" width="105" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Shout Out !!"/>
+                                <rect key="frame" x="103.5" y="309.5" width="168" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title=" Shout Out !! "/>
                                 <connections>
                                     <action selector="recordVoice:" destination="GVZ-nC-6IB" eventType="touchUpInside" id="PvC-IG-gWs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cN-0v-GbM">
-                                <rect key="frame" x="166.5" y="274.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ボーダー x を超えろ！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cN-0v-GbM">
+                                <rect key="frame" x="67" y="260.5" width="241" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcC-GH-Zb4">
-                                <rect key="frame" x="166.5" y="214" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="指定ワード x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcC-GH-Zb4">
+                                <rect key="frame" x="107" y="187" width="161.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtp-xl-6dv">
-                                <rect key="frame" x="166.5" y="452.5" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="セーフ or アウト" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtp-xl-6dv">
+                                <rect key="frame" x="84" y="471" width="207" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5u2-5K-oqe">
-                                <rect key="frame" x="172.5" y="513" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Title"/>
+                                <rect key="frame" x="62" y="544.5" width="251" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="次ラウンドへ or 結果へ"/>
                                 <connections>
                                     <action selector="moveNext:" destination="GVZ-nC-6IB" eventType="touchUpInside" id="d5r-4S-tNV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chF-Q3-LD1">
-                                <rect key="frame" x="166.5" y="173" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x さん" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chF-Q3-LD1">
+                                <rect key="frame" x="149.5" y="133.5" width="76.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ek1-RO-nrn">
-                                <rect key="frame" x="166.5" y="401.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="スコア x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ek1-RO-nrn">
+                                <rect key="frame" x="135" y="407.5" width="105" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PKg-bV-je6" firstAttribute="top" secondItem="Zo0-gX-nmo" secondAttribute="top" constant="80" id="3fJ-XC-70U"/>
+                            <constraint firstItem="PKg-bV-je6" firstAttribute="top" secondItem="Zo0-gX-nmo" secondAttribute="top" constant="40" id="3fJ-XC-70U"/>
                             <constraint firstItem="5u2-5K-oqe" firstAttribute="top" secondItem="Xtp-xl-6dv" secondAttribute="bottom" constant="40" id="6H9-v5-NQE"/>
                             <constraint firstItem="MpN-3O-Vi7" firstAttribute="top" secondItem="1cN-0v-GbM" secondAttribute="bottom" constant="20" id="9Z1-Ez-2Qt"/>
                             <constraint firstItem="1cN-0v-GbM" firstAttribute="top" secondItem="VcC-GH-Zb4" secondAttribute="bottom" constant="40" id="C65-su-FYr"/>
@@ -153,11 +160,12 @@
                         <outlet property="borderLabel" destination="1cN-0v-GbM" id="I4M-wn-glZ"/>
                         <outlet property="memberLabel" destination="chF-Q3-LD1" id="43N-fw-I3R"/>
                         <outlet property="nextButton" destination="5u2-5K-oqe" id="seL-eM-TKs"/>
+                        <outlet property="recordButton" destination="MpN-3O-Vi7" id="Kxi-ok-imw"/>
                         <outlet property="resultLabel" destination="Xtp-xl-6dv" id="pJt-VI-WIW"/>
                         <outlet property="roundLabel" destination="PKg-bV-je6" id="aXW-cJ-Dez"/>
                         <outlet property="scoreLabel" destination="ek1-RO-nrn" id="6vs-Ag-yzC"/>
                         <outlet property="wordLabel" destination="VcC-GH-Zb4" id="Iv8-dK-yAG"/>
-                        <segue destination="64X-XH-a9d" kind="show" identifier="toResultController" id="1qQ-Ft-uYS"/>
+                        <segue destination="64X-XH-a9d" kind="presentation" identifier="toResultController" modalTransitionStyle="crossDissolve" id="1qQ-Ft-uYS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbH-tr-3I1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -172,30 +180,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEb-eg-jjg">
-                                <rect key="frame" x="166.5" y="164" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x さんの負け" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEb-eg-jjg">
+                                <rect key="frame" x="95.5" y="140" width="184" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AV2-QP-PVW">
-                                <rect key="frame" x="133.5" y="537" width="108" height="30"/>
-                                <state key="normal" title="タイトルに戻る"/>
+                                <rect key="frame" x="67.5" y="516" width="240" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title=" タイトルに戻る "/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="apM-B1-PVP"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="apM-B1-PVP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgl-oQ-N3q">
-                                <rect key="frame" x="166.5" y="224.5" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最大スコア x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgl-oQ-N3q">
+                                <rect key="frame" x="95.5" y="238.5" width="184" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5G-Xf-MMf">
+                                <rect key="frame" x="159" y="50" width="57" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Dgl-oQ-N3q" firstAttribute="top" secondItem="aEb-eg-jjg" secondAttribute="bottom" constant="40" id="5K4-ZU-6zB"/>
-                            <constraint firstItem="aEb-eg-jjg" firstAttribute="top" secondItem="Z5M-PU-f5T" secondAttribute="top" constant="100" id="bj4-Xa-ddM"/>
+                            <constraint firstItem="Dgl-oQ-N3q" firstAttribute="top" secondItem="aEb-eg-jjg" secondAttribute="bottom" constant="60" id="5K4-ZU-6zB"/>
+                            <constraint firstItem="G5G-Xf-MMf" firstAttribute="centerX" secondItem="Sde-qE-HGh" secondAttribute="centerX" id="FIm-gd-ds6"/>
+                            <constraint firstItem="G5G-Xf-MMf" firstAttribute="top" secondItem="Z5M-PU-f5T" secondAttribute="top" constant="30" id="IJQ-HG-mbA"/>
+                            <constraint firstItem="aEb-eg-jjg" firstAttribute="top" secondItem="Z5M-PU-f5T" secondAttribute="top" constant="120" id="bj4-Xa-ddM"/>
                             <constraint firstItem="Z5M-PU-f5T" firstAttribute="bottom" secondItem="AV2-QP-PVW" secondAttribute="bottom" constant="100" id="lAX-i5-i14"/>
                             <constraint firstItem="Dgl-oQ-N3q" firstAttribute="centerX" secondItem="Sde-qE-HGh" secondAttribute="centerX" id="qIa-C3-kYx"/>
                             <constraint firstItem="aEb-eg-jjg" firstAttribute="centerX" secondItem="Sde-qE-HGh" secondAttribute="centerX" id="s4O-y0-0Vl"/>
@@ -204,6 +221,7 @@
                         <viewLayoutGuide key="safeArea" id="Z5M-PU-f5T"/>
                     </view>
                     <connections>
+                        <outlet property="backTitleButton" destination="AV2-QP-PVW" id="UuK-aD-vW8"/>
                         <outlet property="loserLabel" destination="aEb-eg-jjg" id="G0c-Rw-a7e"/>
                         <outlet property="maxScoreLabel" destination="Dgl-oQ-N3q" id="dVT-r3-8cp"/>
                     </connections>
@@ -304,6 +322,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="33S-NH-HyH"/>
+        <segue reference="N85-tC-STs"/>
+        <segue reference="apM-B1-PVP"/>
     </inferredMetricsTieBreakers>
 </document>

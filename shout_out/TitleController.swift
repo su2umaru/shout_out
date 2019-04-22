@@ -13,6 +13,10 @@ class TitleController: UIViewController {
     var wordArray: [String] = []
     var memberArray: [String] = []
     
+    @IBOutlet weak var gameStartButton: UIButton!
+    @IBOutlet weak var wordSettingButton: UIButton!
+    @IBOutlet weak var memberSettingButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -27,6 +31,18 @@ class TitleController: UIViewController {
         let member2: String = "よしこ"
         self.memberArray.append(member1)
         self.memberArray.append(member2)
+        
+        self.gameStartButton.layer.borderWidth = 1.0
+        self.gameStartButton.layer.borderColor = UIColor.white.cgColor
+        self.gameStartButton.layer.cornerRadius = 5.0
+        
+        self.wordSettingButton.layer.borderWidth = 1.0
+        self.wordSettingButton.layer.borderColor = UIColor.white.cgColor
+        self.wordSettingButton.layer.cornerRadius = 5.0
+        
+        self.memberSettingButton.layer.borderWidth = 1.0
+        self.memberSettingButton.layer.borderColor = UIColor.white.cgColor
+        self.memberSettingButton.layer.cornerRadius = 5.0
     }
     
     // Hide navigation bar
