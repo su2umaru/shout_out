@@ -26,8 +26,8 @@ class GameController: UIViewController {
     var memberArray: [String] = []
     
     var round: Int = 1
-    var score: Float = 0.0
-    var border: Float = -1.0
+    var score: Int = 0
+    var border: Int = -1
     
     var is_record: Bool = false
     var is_safe: Bool? = nil
@@ -104,7 +104,7 @@ class GameController: UIViewController {
     func prepareNext() {
         self.round += 1
         self.border = self.score
-        self.score = 0.0
+        self.score = 0
         
         self.is_record = false
         self.is_safe = nil
@@ -262,7 +262,7 @@ class GameController: UIViewController {
 //        self.peakTextField.text = "".appendingFormat("%.2f", levelMeter.mPeakPower)
         print("max")
         print(levelMeter.mPeakPower)
-        self.score = max(levelMeter.mPeakPower + 120.0, self.score)
+        self.score = max((Int)(levelMeter.mPeakPower) + 60, self.score)
 //        self.averageTextField.text = "".appendingFormat("%.2f", levelMeter.mAveragePower)
         print("average")
         print(levelMeter.mAveragePower)
