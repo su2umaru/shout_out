@@ -37,8 +37,14 @@ class ResultController: UIViewController {
     
     // Hide navigation bar
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
+    
+    @IBAction func backTitle(_ sender: Any) {
+        self.presentingViewController?.presentingViewController?.dismiss(animated: false, completion: nil)
+//        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     
     
     

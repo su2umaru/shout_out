@@ -35,7 +35,7 @@ class WordSettingController: UITableViewController, UINavigationControllerDelega
     
     // Show navigation bar
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
     // MARK: - Table view data source

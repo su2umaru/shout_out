@@ -89,7 +89,7 @@ class GameController: UIViewController {
     
     // Hide navigation bar
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     
