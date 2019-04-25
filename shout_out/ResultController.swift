@@ -41,7 +41,11 @@ class ResultController: UIViewController {
     }
     
     @IBAction func backTitle(_ sender: Any) {
-        self.presentingViewController?.presentingViewController?.dismiss(animated: false, completion: nil)
+        print("back to title")
+//        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
+//        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
+
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
 //        self.navigationController?.popToRootViewController(animated: true)
     }
     
