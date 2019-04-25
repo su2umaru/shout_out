@@ -69,11 +69,27 @@ class TitleController: UIViewController {
         print(self.userDefaults.array(forKey: "members") as! [String])
     }
     
+    @IBAction func playGame(_ sender: Any) {
+        if self.wordArray.isEmpty {
+            let alert = UIAlertController(title: "エラー", message: "ワードリストが空です", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        } else if self.memberArray.isEmpty {
+            let alert = UIAlertController(title: "エラー", message: "メンバーリストが空です", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        } else {
+            self.performSegue(withIdentifier: "toGameController", sender: nil)
+        }
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "toWordSettingController" {
             //            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            
             let wordSettingController:WordSettingController = segue.destination as! WordSettingController
             wordSettingController.wordArray = self.wordArray
         } else if segue.identifier == "toMemberSettingController" {

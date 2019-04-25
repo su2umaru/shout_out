@@ -13,6 +13,7 @@
         <!--Title Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="TitleController" customModule="shout_out" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -45,7 +46,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title=" ゲームを始める "/>
                                 <connections>
-                                    <segue destination="GVZ-nC-6IB" kind="presentation" identifier="toGameController" modalTransitionStyle="crossDissolve" id="N85-tC-STs"/>
+                                    <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JYC-qF-alJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,9 +69,9 @@
                         <outlet property="gameStartButton" destination="hwu-sN-0hX" id="lYq-kw-yQp"/>
                         <outlet property="memberSettingButton" destination="bDR-fR-UfV" id="MKC-E8-WVM"/>
                         <outlet property="wordSettingButton" destination="Jkz-Wb-Aan" id="XeG-MR-PGt"/>
+                        <segue destination="GVZ-nC-6IB" kind="show" identifier="toGameController" id="PVT-gt-8Ml"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="997.60000000000002" y="26.53673163418291"/>
         </scene>
@@ -83,7 +84,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ラウンド x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKg-bV-je6">
-                                <rect key="frame" x="130.5" y="60" width="114.5" height="29"/>
+                                <rect key="frame" x="130.5" y="104" width="114.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
