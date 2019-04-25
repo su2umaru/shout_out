@@ -13,7 +13,6 @@
         <!--Title Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="TitleController" customModule="shout_out" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -72,6 +71,7 @@
                         <segue destination="GVZ-nC-6IB" kind="show" identifier="toGameController" id="PVT-gt-8Ml"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="997.60000000000002" y="26.53673163418291"/>
         </scene>
@@ -192,7 +192,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title=" タイトルに戻る "/>
                                 <connections>
-                                    <action selector="backTitle:" destination="64X-XH-a9d" eventType="touchUpInside" id="g3X-bF-wWF"/>
+                                    <segue destination="Q4B-o9-RXj" kind="unwind" unwindAction="backToTitleWithSegue:" id="71l-oT-NO5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最大スコア x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgl-oQ-N3q">
@@ -228,6 +228,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7I-zA-GfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Q4B-o9-RXj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2877.5999999999999" y="26.53673163418291"/>
         </scene>

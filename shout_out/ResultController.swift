@@ -40,14 +40,16 @@ class ResultController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-    @IBAction func backTitle(_ sender: Any) {
-        print("back to title")
+//    @IBAction func backTitle(_ sender: Any) {
+//        print("back to title")
+//        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
 //        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
 //        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
 
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+//        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
 //        self.navigationController?.popToRootViewController(animated: true)
-    }
+//    }
     
     
     

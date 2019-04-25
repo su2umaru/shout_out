@@ -104,7 +104,9 @@ class TitleController: UIViewController {
         
     }
     
-    
+    @IBAction func backToTitle(segue: UIStoryboardSegue){
+        // code
+    }
     
 }
 
