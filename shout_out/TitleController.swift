@@ -38,7 +38,8 @@ class TitleController: UIViewController {
 //        self.memberArray.append(member2)
         
         // 起動時に保存データをロード
-        self.userDefaults.register(defaults: ["words": ["ワード1", "ワード2", "ワード3"], "members": ["メンバー1", "メンバー2", "メンバー3"]])
+        self.userDefaults.register(defaults: ["words": ["ワード1", "ワード2", "ワード3"],
+                                              "members": ["メンバー1", "メンバー2", "メンバー3"]])
         self.wordArray = self.userDefaults.array(forKey: "words") as! [String]
         print(self.wordArray)
         self.memberArray = self.userDefaults.array(forKey: "members") as! [String]
@@ -61,12 +62,12 @@ class TitleController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
 //        print("willappear loaded")
-        self.userDefaults.set(self.wordArray, forKey: "words")
-        print("words saved")
-        print(self.userDefaults.array(forKey: "words") as! [String])
-        self.userDefaults.set(self.memberArray, forKey: "members")
-        print("members saved")
-        print(self.userDefaults.array(forKey: "members") as! [String])
+//        self.userDefaults.set(self.wordArray, forKey: "words")
+//        print("words saved")
+//        print(self.userDefaults.array(forKey: "words") as! [String])
+//        self.userDefaults.set(self.memberArray, forKey: "members")
+//        print("members saved")
+//        print(self.userDefaults.array(forKey: "members") as! [String])
     }
     
     @IBAction func playGame(_ sender: Any) {

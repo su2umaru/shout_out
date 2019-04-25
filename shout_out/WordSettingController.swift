@@ -11,6 +11,8 @@ import UIKit
 class WordSettingController: UITableViewController, UINavigationControllerDelegate {
 
     var wordArray: [String] = []
+    
+    var userDefaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +108,11 @@ class WordSettingController: UITableViewController, UINavigationControllerDelega
         if let titleController: TitleController = viewController as? TitleController {
             print(self.wordArray)
             titleController.wordArray = self.wordArray
+            
+            if !self.wordArray.isEmpty {
+                self.userDefaults.set(self.wordArray, forKey: "words")
+                print("words saved")
+            }
         }
     }
 

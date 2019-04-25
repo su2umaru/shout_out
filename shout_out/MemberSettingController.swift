@@ -12,6 +12,8 @@ class MemberSettingController: UITableViewController, UINavigationControllerDele
     
     var memberArray: [String] = []
     
+    var userDefaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.delegate = self
@@ -100,6 +102,11 @@ class MemberSettingController: UITableViewController, UINavigationControllerDele
         if let titleController: TitleController = viewController as? TitleController {
             print(self.memberArray)
             titleController.memberArray = self.memberArray
+            
+            if !self.memberArray.isEmpty {
+                self.userDefaults.set(self.memberArray, forKey: "members")
+                print("members saved")
+            }
         }
     }
 
