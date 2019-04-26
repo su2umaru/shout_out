@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class TitleController: UIViewController {
     
@@ -21,6 +22,9 @@ class TitleController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        AVCaptureDevice.requestAccess(for: AVMediaType.audio, completionHandler: {(granted: Bool) in })
+        
         // Do any additional setup after loading the view.
 //        self.userDefaults.removeObject(forKey: "words")
 //        self.userDefaults.removeObject(forKey: "members")
